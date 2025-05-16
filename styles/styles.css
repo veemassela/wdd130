@@ -34,8 +34,12 @@ aside {
     text-align: center;
 } 
 
+main {
+    max-width: 840px;
+}
+
 main aside img {
-    width: max-content;
+    width: 200px;
     height: auto;
 }
 
