@@ -1,3 +1,14 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    margin: 10px, 0;
+}
+
 nav {
     background-color: darkblue;
     padding: 10px;
@@ -5,20 +16,24 @@ nav {
 
 nav a {
     color: white;
-    display: block;
-    padding: 20px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
 }
 
 h1 {
     color: darkblue;
 }
 
-img {
+
+main img {
     width: 150px;
     height: auto;
     border: 1px solid black;
     padding: 2px;
     box-shadow: 0 0 30px gray;
+    float: right;
+    margin: 0 0 1rem 1rem;
 }
 
 p {
@@ -26,11 +41,8 @@ p {
 }
 
 aside {
+    position: relative;
     width: 20rem;
-    margin: 1rem;
-    border: 10px solid rgb(0 0 0 / 0.2 );
-    background-color: beige;
-    color: black;
     text-align: center;
 } 
 
@@ -38,7 +50,7 @@ main {
     max-width: 840px;
 }
 
-main aside img {
+aside img {
     width: 200px;
     height: auto;
 }
@@ -49,4 +61,21 @@ footer {
     margin-top: 15px;
     border-top: 1px solid #000;
     text-align: center;
+}
+
+/* Class Sectors*/
+
+.box {
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    padding: 1rem;
+    background-color: #ddd;
+    color:#000;
+}
+
+aside h2 {
+    position: absolute;
+    top: 40px;
+    left: 100px;
+
 }
