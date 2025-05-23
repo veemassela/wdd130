@@ -10,11 +10,12 @@
 header{
     background-color: #96C0B7;
     color: #725752;
+    padding: 16px 0;
 }
 
 * {
     margin: 0;
-    border:0;
+    padding:0;
     box-sizing: border-box;
 }
 
@@ -40,6 +41,9 @@ nav, p, section, article {
 
 .socialmedia a {
     text-decoration: none;
+    width: 48px;
+    height: 48px;
+    margin: 0 8px;
 }
 
 .hero {
@@ -55,21 +59,71 @@ nav, p, section, article {
 h1 {
     position: absolute;
     top: 20px;
-    width: 100px;
+    width: 100%;
     padding: 16px;
     text-align: center;
     opacity: 0.7;
     background-color: var(--accent1-color);
     color: #fff;
+    left:0;
 }
 
 article {
     position: absolute;
     background-color: var(--primary-color);
-    color: var(--secondary-color)
+    color: var(--secondary-color);
+    left: 0;
+    right:0;
+    bottom: 300px;
 }
 
 .hero article img {
     float: right;
     width: 125px;
 }
+
+
+header nav {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+}
+
+header nav a {
+    color: #333; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+.adventure-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+.adventure-images img {
+    width: 160px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.socialmedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 8px;
+}
+.socialmedia img {
+    width: 48px;
+    height: 48px;
+}
+
