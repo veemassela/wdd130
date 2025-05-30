@@ -1,129 +1,149 @@
 :root {
     --primary-color: #96C0B7;
     --secondary-color: #725752;
-    --accent1-color:#D4DFC7;
-    --accent2-color:#878E88;
-    --heading-font:"Ancizar Serif", sans-serif;
-    --body-font:"Ancizar Sans", sans-serif;
-}
-
-header{
-    background-color: #96C0B7;
-    color: #725752;
-    padding: 16px 0;
+    --accent1-color: #D4DFC7;
+    --accent2-color: #878E88;
+    --heading-font: "Ancizar Serif", serif;
+    --body-font: "Ancizar Sans", sans-serif;
 }
 
 * {
     margin: 0;
-    padding:0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
     font-family: var(--body-font);
-    color: var(--accent1-color);
+    color: var(--secondary-color);
+    background-color: white;
 }
 
 header, main, footer {
-    width: 840px;
+    max-width: 960px;
     margin: 0 auto;
+    padding: 0 16px;
 }
 
-h1, h2 {
-    font-family:var(--heading-font);
-    color: var(--primary-color);
-}
-
-nav, p, section, article {
-    margin: 16px;
-    padding: 8px;
-}
-
-.socialmedia a {
-    text-decoration: none;
-    width: 48px;
-    height: 48px;
-    margin: 0 8px;
-}
-
-.hero {
-    position: relative;
-}
-
-.hero img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-h1 {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 16px;
-    text-align: center;
-    opacity: 0.7;
-    background-color: var(--accent1-color);
-    color: #fff;
-    left:0;
-}
-
-article {
-    position: absolute;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    left: 0;
-    right:0;
-    bottom: 300px;
-}
-
-.hero article img {
-    float: right;
-    width: 125px;
-}
-
-
-header nav {
+header {
     display: flex;
-    gap: 24px;
-    justify-content: center;
     align-items: center;
-    margin-top: 8px;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 1rem;
 }
 
-header nav a {
-    color: #333; 
+header img {
+    height: 60px;
+}
+
+header h1 {
+    font-family: var(--heading-font);
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+}
+
+nav a {
+    margin-left: 1rem;
+    color: #333;
     text-decoration: none;
     font-weight: bold;
 }
 
-header nav a:hover {
+nav a:hover {
     text-decoration: underline;
 }
 
-.adventure-images {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    justify-content: center;
-    margin-bottom: 16px;
+/* HERO */
+.hero {
+    position: relative;
+    margin-bottom: 2rem;
 }
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero article {
+    position: absolute;
+    background-color: rgba(150, 192, 183, 0.85);
+    color: #222;
+    padding: 1rem;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    max-width: 600px;
+}
+
+.hero article img {
+    float: right;
+    width: 120px;
+    margin-left: 1rem;
+}
+
+/* ADVENTURE IMAGES */
+.adventure-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
 .adventure-images img {
-    width: 160px;
-    height: 100px;
+    width: 100%;
+    height: 120px;
     object-fit: cover;
-    border-radius: 4px;
+    border-radius: 6px;
+}
+
+.adventure-images figcaption {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    text-align: center;
+    margin-top: 0.25rem;
+}
+
+/* HISTORY SECTION */
+.history {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.history-text {
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.history-image img {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1rem 0;
+    border-top: 1px solid #ccc;
+    font-size: 0.9rem;
+    background-color: var(--accent1-color);
 }
 
 .socialmedia {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 16px;
-    margin-top: 8px;
+    gap: 1rem;
+    margin-top: 0.5rem;
 }
+
 .socialmedia img {
     width: 48px;
     height: 48px;
 }
-
