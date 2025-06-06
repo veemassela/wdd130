@@ -54,7 +54,6 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* HERO */
 .hero {
     position: relative;
     margin-bottom: 2rem;
@@ -83,7 +82,6 @@ nav a:hover {
     margin-left: 1rem;
 }
 
-/* ADVENTURE IMAGES */
 .adventure-images {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -105,7 +103,6 @@ nav a:hover {
     margin-top: 0.25rem;
 }
 
-/* HISTORY SECTION */
 .history {
     margin-top: 2rem;
     display: flex;
@@ -126,7 +123,6 @@ nav a:hover {
     border-radius: 8px;
 }
 
-/* FOOTER */
 footer {
     text-align: center;
     margin-top: 3rem;
@@ -146,4 +142,162 @@ footer {
 .socialmedia img {
     width: 48px;
     height: 48px;
+}
+
+form {
+    max-width: 600px;
+    margin: 2rem auto 4rem;
+    padding: 1.5rem;
+    background-color: var(--accent1-color);
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    font-family: var(--body-font);
+    color: var(--secondary-color);
+}
+
+form fieldset {
+    border: 1px solid var(--secondary-color);
+    padding: 1rem 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 6px;
+}
+
+form legend {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+form label {
+    display: block;
+    margin: 0.75rem 0 0.25rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--accent2-color);
+    border-radius: 4px;
+    font-family: var(--body-font);
+    font-size: 1rem;
+    color: var(--secondary-color);
+    resize: vertical;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+    margin-right: 0rem;
+    cursor: pointer;
+}
+
+form button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin-top: 1rem;
+}
+
+form button[type="submit"]:hover {
+    background-color: var(--secondary-color);
+}
+
+.map iframe {
+    display: grid;
+    width: 100%;       
+    max-width: 400px;  
+    height: 300px;     
+    border: 0; 
+    align-items: normal;       
+}
+
+.figs {
+    display: flex;
+    gap: 1rem;             
+    flex-wrap: wrap;        
+    justify-content: center; 
+}
+
+.figs figure {
+    flex: 1 1 150px;        
+    max-width: 200px;      
+}
+
+.figs img {
+    width: 100%;
+    height: 6em;
+    border-radius: 8px;    
+    display: block;
+}
+
+.contact-map-container {
+  display: flex;
+  gap: 2rem; 
+  flex-wrap: wrap; 
+  align-items: flex-start; 
+}
+
+.contact-info {
+  flex: 1 1 300px; 
+  min-width: 250px; 
+}
+
+.map {
+  flex: 1 1 400px; 
+  min-width: 300px;
+}
+
+.map iframe {
+  width: 100%; 
+  height: 300px; 
+  border: 0;
+}
+
+.contact-info {
+    background-image: url('images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: darken;
+    padding: 2rem;
+    color: white;
+    min-height: 300px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../images/hero.jpg'); /* Adjust path to your hero image */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Optional: keeps background fixed on scroll */
+    font-family: var(--body-font);
+    color: var(--secondary-color);
+}
+
+.figs {
+    display: flex;
+    justify-content: right;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0.5rem;
+    border-radius: 6px;
+}
+.figs figcaption {
+    color: white;
 }
