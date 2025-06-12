@@ -54,15 +54,22 @@ nav a:hover {
     text-decoration: underline;
 }
 
-.hero {
-    position: relative;
-    margin-bottom: 2rem;
-}
-
-.hero img {
+/*.hero img {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(150, 192, 183, 0.7);
+    color: #222;
+    padding: 2rem 2.5rem;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .hero article {
@@ -73,13 +80,46 @@ nav a:hover {
     bottom: 20px;
     left: 20px;
     right: 20px;
-    max-width: 600px;
 }
 
 .hero article img {
     float: right;
     width: 120px;
     margin-left: 1rem;
+}*/
+
+.hero {
+  width: 100vw;             
+  height: 400px;             
+  background-image: url('images/hero.jpg');
+  background-size: cover;    
+  background-position: center center; 
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background: rgba(0,0,0,0.6);
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 80vw;
+    min-width: 250px;
+    width: auto;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    z-index: 2;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 .adventure-images {
@@ -264,7 +304,7 @@ form button[type="submit"]:hover {
 }
 
 .contact-info {
-    background-image: url('images/hero.jpg');
+    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -281,15 +321,15 @@ html, body {
     padding: 0;
 }
 
-body {
-    background-image: url('../images/hero.jpg'); /* Adjust path to your hero image */
+/*body {
+    background-image: url('../images/hero.jpg'); 
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed; /* Optional: keeps background fixed on scroll */
+    background-attachment: fixed; 
     font-family: var(--body-font);
     color: var(--secondary-color);
-}
+}*/
 
 .figs {
     display: flex;
@@ -301,3 +341,200 @@ body {
 .figs figcaption {
     color: white;
 }
+
+.cta {
+    text-align: center;
+    background-color: var(--accent1-color);
+    padding: 2rem 1rem;
+    margin: 2rem 0rem;
+    border-radius: 8px;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+/*.hero {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: none;
+    overflow: hidden;
+    min-height: 350px;
+}
+
+.hero img {
+    width: 100vw;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}*/
+
+body {
+    overflow-x: hidden;
+}
+
+.trips-descriptions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.trips-descriptions article {
+  background-color: var(--accent1-color);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.trips-descriptions img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.trips-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.trips-table th, .trips-table td {
+  border: 1px solid var(--accent2-color);
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.trips-table th {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* CTA Section with matching background and legible text */
+.cta {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  background-color: rgba(212, 223, 199, 0.85); /* semi-transparent accent color */
+  border-radius: 8px;
+  color: var(--secondary-color);
+  text-align: center;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.cta h3 {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Employee Gallery */
+.employee-gallery {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem auto;
+  max-width: 960px;
+}
+
+.employee-gallery figure {
+  flex: 1 1 150px;
+  max-width: 200px;
+  background-color: rgba(212, 223, 199, 0.85);
+  border-radius: 8px;
+  padding: 0.5rem;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.employee-gallery img {
+  width: 100%;
+  height: 6em;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.employee-gallery figcaption {
+  color: var(--secondary-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Newsletter Signup */
+.newsletter-signup {
+  max-width: 600px;
+  margin: 2rem auto 4rem;
+  padding: 1.5rem 2rem;
+  background-color: rgba(212, 223, 199, 0.85);
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  color: var(--secondary-color);
+  font-family: var(--body-font);
+}
+
+.newsletter-signup h3 {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.newsletter-signup form label {
+  display: block;
+  margin: 0.75rem 0 0.25rem;
+  font-weight: 600;
+}
+
+.newsletter-signup form input[type="text"],
+.newsletter-signup form input[type="email"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--accent2-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  color: var(--secondary-color);
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.newsletter-signup form button[type="submit"] {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  width: 100%;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-signup form button[type="submit"]:hover {
+  background-color: var(--secondary-color);
+}
+
