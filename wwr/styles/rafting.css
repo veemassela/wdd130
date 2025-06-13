@@ -54,40 +54,6 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/*.hero img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(150, 192, 183, 0.7);
-    color: #222;
-    padding: 2rem 2.5rem;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.hero article {
-    position: absolute;
-    background-color: rgba(150, 192, 183, 0.85);
-    color: #222;
-    padding: 1rem;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-}
-
-.hero article img {
-    float: right;
-    width: 120px;
-    margin-left: 1rem;
-}*/
-
 .hero {
   width: 100vw;             
   height: 400px;             
@@ -263,10 +229,14 @@ form button[type="submit"]:hover {
 
 .figs {
     display: flex;
-    gap: 1rem;             
-    flex-wrap: wrap;        
-    justify-content: center; 
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-end; /* or center, as you prefer */
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0.5rem;
+    border-radius: 6px;
 }
+
 
 .figs figure {
     flex: 1 1 150px;        
@@ -321,23 +291,6 @@ html, body {
     padding: 0;
 }
 
-/*body {
-    background-image: url('../images/hero.jpg'); 
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed; 
-    font-family: var(--body-font);
-    color: var(--secondary-color);
-}*/
-
-.figs {
-    display: flex;
-    justify-content: right;
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 0.5rem;
-    border-radius: 6px;
-}
 .figs figcaption {
     color: white;
 }
@@ -356,25 +309,6 @@ html, body {
     gap: 2rem;
     margin: 2rem 0;
 }
-
-/*.hero {
-    position: relative;
-    width: 100vw;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    max-width: none;
-    overflow: hidden;
-    min-height: 350px;
-}
-
-.hero img {
-    width: 100vw;
-    height: 400px;
-    object-fit: cover;
-    display: block;
-}*/
 
 body {
     overflow-x: hidden;
@@ -417,7 +351,6 @@ body {
   color: white;
 }
 
-/* CTA Section with matching background and legible text */
 .cta {
   max-width: 600px;
   margin: 2rem auto;
@@ -449,7 +382,6 @@ body {
   background-color: var(--secondary-color);
 }
 
-/* Employee Gallery */
 .employee-gallery {
   display: flex;
   gap: 1rem;
@@ -484,7 +416,6 @@ body {
   font-size: 0.9rem;
 }
 
-/* Newsletter Signup */
 .newsletter-signup {
   max-width: 600px;
   margin: 2rem auto 4rem;
